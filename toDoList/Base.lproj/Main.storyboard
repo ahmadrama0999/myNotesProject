@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MyToDoList-->
+        <!--My Notes-->
         <scene sceneID="N3x-yd-Mp7">
             <objects>
                 <tableViewController id="65o-Oq-xYD" customClass="TableViewController" customModule="toDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                             <outlet property="delegate" destination="65o-Oq-xYD" id="VrL-KY-Gsd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MyToDoList" id="guL-gZ-TYA">
+                    <navigationItem key="navigationItem" title="My Notes" id="guL-gZ-TYA">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="mt7-W9-hVp">
                                 <connections>
@@ -50,6 +50,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="edit" id="9Os-LO-Owg">
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="pushEditButton:" destination="65o-Oq-xYD" id="tlv-ju-lSP"/>
                                 </connections>
