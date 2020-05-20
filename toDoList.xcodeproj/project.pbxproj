@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7711AA002475716400A15C82 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711A9FF2475716400A15C82 /* TableViewController.swift */; };
+		7711AA02247571E100A15C82 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711AA01247571E100A15C82 /* Model.swift */; };
+		7711AA042475A55E00A15C82 /* NotificatiomSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711AA032475A55E00A15C82 /* NotificatiomSettings.swift */; };
 		7713612A24742E9100213337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713612924742E9100213337 /* AppDelegate.swift */; };
 		7713612C24742E9100213337 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713612B24742E9100213337 /* SceneDelegate.swift */; };
-		7713612E24742E9100213337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713612D24742E9100213337 /* ViewController.swift */; };
 		7713613124742E9100213337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7713612F24742E9100213337 /* Main.storyboard */; };
 		7713613324742E9400213337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7713613224742E9400213337 /* Assets.xcassets */; };
 		7713613624742E9400213337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7713613424742E9400213337 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7711A9FF2475716400A15C82 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7711AA01247571E100A15C82 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7711AA032475A55E00A15C82 /* NotificatiomSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificatiomSettings.swift; sourceTree = "<group>"; };
 		7713612624742E9100213337 /* toDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7713612924742E9100213337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7713612B24742E9100213337 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7713612D24742E9100213337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7713613024742E9100213337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7713613224742E9400213337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7713613524742E9400213337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 			children = (
 				7713612924742E9100213337 /* AppDelegate.swift */,
 				7713612B24742E9100213337 /* SceneDelegate.swift */,
-				7713612D24742E9100213337 /* ViewController.swift */,
+				7711A9FF2475716400A15C82 /* TableViewController.swift */,
+				7711AA01247571E100A15C82 /* Model.swift */,
+				7711AA032475A55E00A15C82 /* NotificatiomSettings.swift */,
 				7713612F24742E9100213337 /* Main.storyboard */,
 				7713613224742E9400213337 /* Assets.xcassets */,
 				7713613424742E9400213337 /* LaunchScreen.storyboard */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7713612E24742E9100213337 /* ViewController.swift in Sources */,
 				7713612A24742E9100213337 /* AppDelegate.swift in Sources */,
+				7711AA002475716400A15C82 /* TableViewController.swift in Sources */,
 				7713612C24742E9100213337 /* SceneDelegate.swift in Sources */,
+				7711AA02247571E100A15C82 /* Model.swift in Sources */,
+				7711AA042475A55E00A15C82 /* NotificatiomSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
