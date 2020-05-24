@@ -10,6 +10,11 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+    }
+    
     @IBAction func pushEditButton(_ sender: Any) {
         tableView.setEditing(!tableView.isEditing, animated: true)
         tableView.reloadData()
@@ -22,24 +27,17 @@ class TableViewController: UITableViewController {
             textField.placeholder = "New Item"
         }
         
-        let alertAction1 = UIAlertAction(title: "Cancel", style: .default) { (alert) in
-            
-        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        let alertAction2 = UIAlertAction(title: "Create", style: .cancel) { (alert) in
-            let newNote = alertController.textFields![0].text
-            addItem(nameItem: newNote!)
+        let createAction = UIAlertAction(title: "Create", style: .default) { (alert) in
+            guard let newNoteText = alertController.textFields?[0].text else { return }
+            addItem(nameItem: newNoteText)
             self.tableView.reloadData()
         }
         
-        alertController.addAction(alertAction1)
-        alertController.addAction(alertAction2)
+        alertController.addAction(cancelAction)
+        alertController.addAction(createAction)
         present(alertController, animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.tableFooterView = UIView()
     }
     
     // MARK: - Table view data source
@@ -49,7 +47,6 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return myNotes.count
     }
     
@@ -58,6 +55,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let curNote = myNotes[indexPath.row]
         cell.textLabel?.text = curNote["Name"] as? String
+        cell.textLabel?.numberOfLines = 0
         
         if (curNote["isCompleted"] as? Bool) == true {
             cell.imageView?.image = #imageLiteral(resourceName: "check")
@@ -77,22 +75,18 @@ class TableViewController: UITableViewController {
     
     
     
-    // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
     
     
-    
-    // Override to support editing the table view.
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+           
             removeItem(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
     
@@ -122,24 +116,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return false
     }
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 

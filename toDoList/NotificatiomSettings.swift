@@ -13,6 +13,7 @@ func requestNotification() {
     UNUserNotificationCenter.current().requestAuthorization(options: [.badge]) { (isEnabled, error) in
     }
 }
+
 func countBadge() {
     var quantityBadges = 0
     for note in myNotes {

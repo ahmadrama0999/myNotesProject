@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+
 var myNotes: [[String : Any]] {
     get {
         if let  array = UserDefaults.standard.array(forKey: "KeyForNotes") as?  [[String : Any]] {
@@ -18,9 +20,9 @@ var myNotes: [[String : Any]] {
     }
     set {
         UserDefaults.standard.set(newValue, forKey: "KeyForNotes")
-        UserDefaults.standard.synchronize()
     }
 }
+
 func addItem(nameItem: String, isCompleted: Bool = false ) {
     myNotes.append(["Name": nameItem, "isCompleted": isCompleted])
     countBadge()
